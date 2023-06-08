@@ -5,7 +5,7 @@ ActiveAdmin.register Customer do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :fullname, :phone_number, :email, :notes
+  permit_params :fullname, :phone_number, :email, :notes, :image
   #
   # or
   #
@@ -15,7 +15,7 @@ ActiveAdmin.register Customer do
   #   permitted
   # end
 
-  permit_params :name, :email, :phone
+  #permit_params :name, :email, :phone
 
   index do
     selectable_column
@@ -24,6 +24,13 @@ ActiveAdmin.register Customer do
     column :phone_number
     column :email
     column :notes
+    column :image do |customer|
+      if customer.image.attached?
+        image_tag customer.image.variant(resize: "100x100")
+      else
+        "No Image"
+      end
+    end
     actions
   end
 
@@ -33,6 +40,7 @@ ActiveAdmin.register Customer do
       f.input :phone_number
       f.input :email
       f.input :notes
+      f.input :image, as: :file
     end
     f.actions
   end
