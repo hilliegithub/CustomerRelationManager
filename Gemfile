@@ -33,6 +33,9 @@ gem "activeadmin"
 # Adding Devise for Active Admin
 gem "devise"
 
+# active dependency
+gem "sassc"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
