@@ -1,0 +1,7 @@
+<h1>Customers without Email Addresses</h1>
+
+<% if @customers.any? %>
+  <%= render @customers %>
+<% else %>
+  <p>No customers are missing email addresses.</p>
+<% end %>
