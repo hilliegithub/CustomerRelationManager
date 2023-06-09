@@ -1,0 +1,11 @@
+<h1>All Customers</h1>
+
+<b><%= @customer.fullname %></b>
+
+<p><%= @customer.phone_number %></p>
+
+<p><%= @customer.email %>  </p>
+
+<p><%= @customer.notes %>  </p>
+
+<p><%= image_tag @customer.image.variant(resize: "100x100") %></p>
