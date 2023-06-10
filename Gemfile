@@ -36,6 +36,8 @@ gem "devise"
 # active dependency
 gem "sassc"
 
+gem "ruby-vips"
+
 # Active Storage image processing
 
 # Use Redis adapter to run Action Cable in production

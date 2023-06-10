@@ -26,7 +26,7 @@ ActiveAdmin.register Customer do
     column :notes
     column :image do |customer|
       if customer.image.attached?
-        image_tag customer.image.variant(resize: "100x100")
+        image_tag(customer.image.variant(resize_to_limit: [100, 100]))
       else
         "No Image"
       end

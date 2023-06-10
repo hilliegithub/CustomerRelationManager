@@ -8,4 +8,5 @@
 
 <p><%= customer.notes %>  </p>
 
-<p><%= image_tag customer.image.variant(resize: "100x100") %></p>
+<p><%= image_tag(customer.image.variant(resize_to_limit: [100, 100]))
+ %></p>
