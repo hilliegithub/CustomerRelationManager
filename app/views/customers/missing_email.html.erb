@@ -1,10 +1,18 @@
-<h1>Customers without Email Addresses</h1>
+<section class="hero is-success">
+  <div class="hero-body">
+    <p class="title">
+      Customers without Email Addresses
+    </p>
+    <p class="subtitle">
+      <%= link_to "Back to Index page", customers_path %>
+    </p>
+  </div>
+</section>
 
+<div class="ml-2" >
 <% if @customers.any? %>
   <%= render @customers %>
 <% else %>
   <p>No customers are missing email addresses.</p>
 <% end %>
-
-<br>
-<%= link_to "Index", customers_path %>
+</div>

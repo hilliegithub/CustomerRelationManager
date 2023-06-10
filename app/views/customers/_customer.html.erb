@@ -1,12 +1,21 @@
+ <div class="card" style="max-width: 500px; margin-top: 30px;">
+  <div class="card-image">
+    <figure class="image is-5by3">
+      <%= image_tag(customer.image.variant(resize_to_limit: [400, 400]))%>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4"><%= customer.fullname %></p>
+        <p class="subtitle is-6"><%= customer.email %></p>
+      </div>
+    </div>
 
-
-<b><%= customer.fullname %></b>
-
-<p><%= customer.phone_number %></p>
-
-<p><%= customer.email %>  </p>
-
-<p><%= customer.notes %>  </p>
-
-<p><%= image_tag(customer.image.variant(resize_to_limit: [100, 100]))
- %></p>
+    <div class="content">
+      <%= customer.notes %>
+      <br>
+      <p class="is-size-5"><%= customer.phone_number %></p>
+    </div>
+  </div>
+</div>

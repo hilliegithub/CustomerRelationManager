@@ -1,6 +1,13 @@
-<h1>Customers Ordered By Fullname</h1>
-
+<section class="hero is-success">
+  <div class="hero-body">
+    <p class="title">
+      Customers Ordered By Fullname
+    </p>
+    <p class="subtitle">
+      <%= link_to "Back to Index page", customers_path %>
+    </p>
+  </div>
+</section>
+<div class="ml-2" >
 <%= render @customers %>
-
-<br>
-<%= link_to "Index", customers_path %>
+</div>

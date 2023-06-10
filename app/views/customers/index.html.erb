@@ -1,6 +1,17 @@
-<h1>All Customers</h1>
-<%= link_to "Alphabetized",  alphabetized_customers_path %> |
-<%= link_to "Missing Emails",  missing_email_customers_path %>
-<br>
 
+<section class="hero is-success">
+  <div class="hero-body">
+    <p class="title">
+      All Customers
+    </p>
+    <p class="subtitle">
+      <%= link_to "Alphabetized",  alphabetized_customers_path %>
+
+      <%= link_to "Missing Emails",  missing_email_customers_path %>
+    </p>
+  </div>
+</section>
+
+<div class="ml-2" >
 <%= render @customers %>
+</div>
